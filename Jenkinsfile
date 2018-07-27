@@ -10,7 +10,7 @@ pipeline {
         stage('dep install') {
             steps {
                 sh 'curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh'
-                sh "export GOPATH=$PWD"
+                sh "export GOPATH=${JENKINS_HOME}/workspace/${JOB_NAME}"
             }
         }
         stage('Input') {
