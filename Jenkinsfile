@@ -5,6 +5,9 @@ pipeline {
             args '-p 8091:8181'
         }
     }
+    environment {
+        GOPATH = "$WORKSPACE"
+    }
 
     stages {
         stage('dep install') {
