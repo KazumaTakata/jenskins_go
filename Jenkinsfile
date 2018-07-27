@@ -20,9 +20,9 @@ pipeline {
 
         
         stage("run main") {
-            
+
             steps {
-                sh 'go run main.go'
+                sh 'go run ./src/main.go'
             }
         }
         
