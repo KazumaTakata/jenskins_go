@@ -13,7 +13,6 @@ pipeline {
         stage('dep install') {
             steps {
                 sh 'curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh'
-                sh './script/addgopath.sh'
             }
         }
         stage('Input') {
