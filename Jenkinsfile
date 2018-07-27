@@ -12,8 +12,16 @@ pipeline {
                 sh 'curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh'
             }
         }
+
         
         stage("run main") {
+
+            steps {
+                script {
+                    def userinput = input()
+                }
+            }
+
             steps {
                 sh 'go run main.go'
             }
